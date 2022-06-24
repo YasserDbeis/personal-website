@@ -1,0 +1,78 @@
+{
+    "Experience": {
+        "content": [
+            {
+                "contentTitle": "Microsoft",
+                "contentDesc": "I worked at msft"
+            },
+            {
+                "contentTitle": "Dana-Farber Cancer Institute",
+                "contentDesc": "I worked at dfci"
+            }
+        ],
+        "isOpen": false
+    },
+    "Projects": {
+        "content": [
+            {
+                "contentTitle": "TyroCode",
+                "contentDesc": "I worked on TyroCode"
+            },
+            {
+                "contentTitle": "SunLang",
+                "contentDesc": "I worked on SunLang"
+            },
+            {
+                "contentTitle": "Refugee Tracker",
+                "contentDesc": "I worked on Refugee Tracker"
+            },
+            {
+                "contentTitle": "Refugee Tracker",
+                "contentDesc": "I worked on Refugee Tracker"
+            },
+            {
+                "contentTitle": "Refugee Tracker",
+                "contentDesc": "I worked on Refugee Tracker"
+            },
+            {
+                "contentTitle": "Refugee Tracker",
+                "contentDesc": "I worked on Refugee Tracker"
+            },
+            {
+                "contentTitle": "Refugee Tracker",
+                "contentDesc": "I worked on Refugee Tracker"
+            },
+            {
+                "contentTitle": "Refugee Tracker",
+                "contentDesc": "I worked on Refugee Tracker"
+            }
+        ],
+        "isOpen": false
+    },
+    "Education": {
+        "content": [
+            {
+                "contentTitle": "Arizona State University - Barrett Honors College",
+                "contentDesc": "I went to ASU and studied Computer Science"
+            },
+            {
+                "contentTitle": "Arizona State University - Barrett Honors College",
+                "contentDesc": "I went to ASU and studied Computer Systems Engineering"
+            }
+        ],
+        "isOpen": false
+    },
+    "Awards": {
+        "content": [
+            {
+                "contentTitle": "Convocation Speaker",
+                "contentDesc": "I got to be the speaker at grad"
+            },
+            {
+                "contentTitle": "IMPACT Award",
+                "contentDesc": "I got the impact award"
+            }
+        ],
+        "isOpen": false
+    }
+}
