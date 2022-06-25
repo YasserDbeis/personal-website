@@ -3,8 +3,14 @@ import Draggable from 'react-draggable';
 import Card from 'react-card-component';
 import './Window.css';
 import ScrollArea from 'react-scrollbar';
+import {
+  BrowserView,
+  MobileView,
+  isBrowser,
+  isMobile,
+} from 'react-device-detect';
 
-const MAXIMIZED_SIZE = 70;
+const MAXIMIZED_SIZE = 80;
 const MINIMIZED_SIZE = 40;
 
 const Window = (props) => {
@@ -12,6 +18,14 @@ const Window = (props) => {
 
   const windowSize = isExpanded ? MAXIMIZED_SIZE : MINIMIZED_SIZE;
   const itemHorizMargin = windowSize / 2;
+
+  const windowBtnClickHandler = () => {
+    alert('I am an alert box!');
+  };
+
+  const expandBtnClickHandler = (isExpanded) => {
+    setIsExpanded(isExpanded);
+  };
 
   return (
     <Draggable
@@ -23,8 +37,8 @@ const Window = (props) => {
         style={{
           top: `calc(50% - ${windowSize / 2}vh)`,
           left: `calc(50% - ${windowSize / 2}vw)`,
-          height: `${windowSize}vh`,
-          width: `${windowSize}vw`,
+          minHeight: `${windowSize}px`,
+          minWidth: `${windowSize}px`,
         }}
       >
         <div
@@ -32,8 +46,8 @@ const Window = (props) => {
           style={{
             display: 'flex',
             flexDirection: 'column',
-            height: 'inherit',
-            width: 'inherit',
+            height: '100%',
+            width: '100%',
             // overflow: 'auto',
           }}
         >
@@ -42,7 +56,7 @@ const Window = (props) => {
             outlined
             glass
             glassOption={{ blur: 100, transparency: 0.2 }}
-            style={{ height: 'inherit', width: 'inherit' }}
+            style={{ height: '100%', width: '100%' }}
           >
             <strong className="cursor">
               <div className="drag-handle-div-container">
@@ -50,26 +64,35 @@ const Window = (props) => {
                   <button
                     className="traffic-light traffic-light-close"
                     id="close"
-                    onClick={() => {
-                      alert('I am an alert box!');
-                    }}
+                    onTouchStart={isMobile ? windowBtnClickHandler : null}
+                    onClick={isMobile ? null : windowBtnClickHandler}
                   ></button>
                   <button
                     className="traffic-light traffic-light-minimize"
                     id="minimize"
-                    onClick={() => setIsExpanded(false)}
+                    onTouchStart={
+                      isMobile ? () => expandBtnClickHandler(false) : null
+                    }
+                    onClick={
+                      isMobile ? null : () => expandBtnClickHandler(false)
+                    }
                   ></button>
                   <button
                     className="traffic-light traffic-light-maximize"
                     id="maximize"
-                    onClick={() => setIsExpanded(true)}
+                    onTouchStart={
+                      isMobile ? () => expandBtnClickHandler(true) : null
+                    }
+                    onClick={
+                      isMobile ? null : () => expandBtnClickHandler(true)
+                    }
                   ></button>
                 </div>
               </div>
             </strong>
             <div
               className="window-content-container"
-              style={{ height: 'inherit', width: 'inherit' }}
+              style={{ height: '100%', width: '100%' }}
             >
               <ScrollArea>
                 <div
@@ -78,8 +101,8 @@ const Window = (props) => {
                     fontSize: '12px',
                     textAlign: 'center',
                     color: 'white',
-                    height: `calc(${windowSize}vh - 45px)`,
-                    width: `calc(${windowSize}vw - 10px)`,
+                    height: `calc(${windowSize}vh - 35px)`,
+                    width: `calc(${windowSize}vw - 35px)`,
                     overflow: 'auto',
                   }}
                 >
@@ -88,10 +111,10 @@ const Window = (props) => {
                       <div
                         key={index}
                         className="card-item-container"
-                        style={{
-                          marginLeft: `${itemHorizMargin.toString()}px`,
-                          marginRight: `${itemHorizMargin.toString()}px`,
-                        }}
+                        // style={{
+                        //   marginLeft: `${itemHorizMargin.toString()}px`,
+                        //   marginRight: `${itemHorizMargin.toString()}px`,
+                        // }}
                       >
                         <Card
                           key={entry['contestTitle']}

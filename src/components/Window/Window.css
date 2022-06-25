@@ -27,21 +27,25 @@
 
 .window-content-container { 
     border-top: 2px solid whitesmoke;   
-    padding: 5px;
+    /* padding: 5px; */
     text-align: center;
+    width: 20vw;
     /* overflow: auto; */
 }
 
 .window-content-item {
-    width: auto !important;
+    /* width: 20vw !important; */
     /* margin-top: 20px;
     margin-bottom: 20px; */
     /* margin: 20px; */
 }
 
 .card-item-container {
+    margin: 0 auto;
     margin-top: 10px;
     margin-bottom: 10px;
+    width: 80% !important;
+
 }
 
 .drag-handle-div-container {
