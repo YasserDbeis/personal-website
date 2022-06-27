@@ -1,7 +1,10 @@
 import { useEffect, useRef, useState } from 'react';
 import Draggable from 'react-draggable';
 import Card from 'react-card-component';
+import ContentItem from '../ContentItem/ContentItem';
 import './Window.css';
+import './TrafficLight.css';
+
 import ScrollArea from 'react-scrollbar';
 import {
   BrowserView,
@@ -9,6 +12,7 @@ import {
   isBrowser,
   isMobile,
 } from 'react-device-detect';
+import { Resizable } from 're-resizable';
 
 const MAXIMIZED_SIZE = 80;
 const MINIMIZED_SIZE = 40;
@@ -19,8 +23,13 @@ const Window = (props) => {
   const windowSize = isExpanded ? MAXIMIZED_SIZE : MINIMIZED_SIZE;
   const itemHorizMargin = windowSize / 2;
 
-  const windowBtnClickHandler = () => {
-    alert('I am an alert box!');
+  const [width, setWidth] = useState(windowSize);
+  const [height, setHeight] = useState(windowSize);
+
+  const closeBtnClickHandler = () => {
+    const folderStateCopy = JSON.parse(JSON.stringify(props.folderState));
+    folderStateCopy[props.folderName].isOpen = false;
+    props.setFolderState(folderStateCopy);
   };
 
   const expandBtnClickHandler = (isExpanded) => {
@@ -64,8 +73,8 @@ const Window = (props) => {
                   <button
                     className="traffic-light traffic-light-close"
                     id="close"
-                    onTouchStart={isMobile ? windowBtnClickHandler : null}
-                    onClick={isMobile ? null : windowBtnClickHandler}
+                    onTouchStart={isMobile ? closeBtnClickHandler : null}
+                    onClick={isMobile ? null : closeBtnClickHandler}
                   ></button>
                   <button
                     className="traffic-light traffic-light-minimize"
@@ -99,7 +108,6 @@ const Window = (props) => {
                   className="window-content-subcontainer"
                   style={{
                     fontSize: '12px',
-                    textAlign: 'center',
                     color: 'white',
                     height: `calc(${windowSize}vh - 35px)`,
                     width: `calc(${windowSize}vw - 35px)`,
@@ -125,8 +133,7 @@ const Window = (props) => {
                           glassOption={{ blur: 100, transparency: 0.7 }}
                           className="window-content-item"
                         >
-                          <p>{entry['contentTitle']}</p>
-                          <p>{entry['contentDesc']}</p>
+                          <ContentItem content={entry} />
                         </Card>
                       </div>
                     );

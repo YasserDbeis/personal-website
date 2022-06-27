@@ -5,6 +5,7 @@ import Folder from './components/Folder/Folder';
 import Window from './components/Window/Window';
 
 import { useState } from 'react';
+import Draggable from 'react-draggable';
 
 function App() {
   const [folderState, setFolderState] = useState(
@@ -12,12 +13,6 @@ function App() {
   );
 
   const [folderSelectionName, setFolderSelectionName] = useState(null);
-
-  const closeFolder = () => {
-    const folderStateCopy = JSON.parse(JSON.stringify(folderState));
-    folderStateCopy['Experience'].isOpen = false;
-    setFolderState(folderStateCopy);
-  };
 
   // console.log(Array.from(Object.keys(folderContent)));
   return (
@@ -46,6 +41,8 @@ function App() {
               key={folderName}
               folderName={folderName}
               folderContent={folderContent}
+              folderState={folderState}
+              setFolderState={setFolderState}
             />
           );
         }

@@ -23,22 +23,20 @@ const Folder = (props) => {
   };
 
   return (
-    <div id="folderContainer">
-      <div id="folderIconContainer" onClick={onFolderClick}>
-        {props.folderState[props.folderName].isOpen ? (
-          <FcOpenedFolder size={50} />
-        ) : (
-          <FcFolder size={50} />
-        )}
+    <Draggable>
+      <div className="folderContainer">
+        <div className="folderIconContainer" onClick={onFolderClick}>
+          {props.folderState[props.folderName].isOpen ? (
+            <FcOpenedFolder size={75} />
+          ) : (
+            <FcFolder size={75} />
+          )}
+        </div>
+        <p className="folderName unselectable" style={{ fontSize: '12px' }}>
+          {props.folderName}
+        </p>
       </div>
-      <p
-        id="folderName"
-        className="unselectable"
-        style={{ margin: '0', fontSize: '12px' }}
-      >
-        {props.folderName}
-      </p>
-    </div>
+    </Draggable>
   );
 };
 
