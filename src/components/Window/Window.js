@@ -3,13 +3,13 @@ import Draggable from 'react-draggable';
 import Card from 'react-card-component';
 import ContentItem from '../ContentItem/ContentItem';
 import './Window.css';
-import './TrafficLight.css';
 import ScrollArea from 'react-scrollbar';
 import {
   BrowserView,
   MobileView,
   isBrowser,
   isMobile,
+  isDesktop,
 } from 'react-device-detect';
 import { Resizable } from 're-resizable';
 import GitHubCalendar from 'react-github-calendar';
@@ -35,6 +35,14 @@ const Window = (props) => {
   const expandBtnClickHandler = (isExpanded) => {
     setIsExpanded(isExpanded);
   };
+
+  useEffect(() => {
+    if (isMobile) {
+      require('./TrafficLightMobile.css');
+    } else {
+      require('./TrafficLightMobile.css');
+    }
+  }, []);
 
   return (
     <Draggable
@@ -131,7 +139,7 @@ const Window = (props) => {
                         paddingLeft: '4vw',
                         paddingRight: '4vw',
                         paddingTop: '20px',
-                        paddingBlock: '20px',
+                        paddingBottom: '10px',
                       }}
                       username="YasserDbeis"
                     />
@@ -144,7 +152,7 @@ const Window = (props) => {
                           bordered
                           outlined
                           glass
-                          hoverType="zoom"
+                          hoverType={isDesktop ? 'zoom' : 'up'}
                           glassOption={{ blur: 100, transparency: 0.7 }}
                           className="window-content-item"
                         >

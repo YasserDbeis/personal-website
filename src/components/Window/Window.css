@@ -2,7 +2,7 @@
     display: table;
     margin-left: 15px;
     padding-bottom: 5px;
-    /* z-index: 99999999; */
+    z-index: 0;
 }
 
 .cursor {
@@ -45,11 +45,16 @@
 
 .card-item-container {
     margin: 0 auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 3.5vh;
+    margin-bottom: 3.5vh;
     width: 85% !important;
-
 }
+
+/* .card-item-container:hover {
+    background-color: red;
+    margin-top: 40px;
+    margin-bottom: 40px;
+} */
 
 .drag-handle-div-container {
     background-color: grey;
