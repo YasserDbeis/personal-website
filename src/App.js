@@ -17,18 +17,16 @@ function App() {
   // console.log(Array.from(Object.keys(folderContent)));
   return (
     <div className="App">
-      <div id="foldersContainer">
-        {Array.from(Object.keys(folderContent)).map((folderName) => {
-          return (
-            <Folder
-              key={folderName}
-              folderState={folderState}
-              setFolderState={setFolderState}
-              folderName={folderName}
-            />
-          );
-        })}
-      </div>
+      {Array.from(Object.keys(folderContent)).map((folderName) => {
+        return (
+          <Folder
+            key={folderName}
+            folderState={folderState}
+            setFolderState={setFolderState}
+            folderName={folderName}
+          />
+        );
+      })}
       {Object.entries(folderState).map((folder) => {
         const folderName = folder[0];
         const folderData = folder[1];
