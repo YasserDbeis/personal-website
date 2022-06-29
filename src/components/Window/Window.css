@@ -53,4 +53,5 @@
 
 .drag-handle-div-container {
     background-color: grey;
+    display: flex;
 }

@@ -3,31 +3,43 @@
         "content": [
             {
                 "contentTitle": "Google",
-                "contentPos": "Software Engineer",
-                "contentDesc": "Working on Android Developer Tools.",
+                "contentSubtitle": "Software Engineer",
+                "contentDesc": "Working on Android Developer Tools, specifically the Android Studio Profiler.",
                 "startDate": "August 2022",
-                "endDate": "Present"
+                "endDate": "Present",
+                "logoAsset": "google_logo.png"
             },
             {
                 "contentTitle": "Microsoft",
-                "contentPos": "Software Engineer Intern",
-                "contentDesc": "I worked at msft. It was fun. And cool!",
+                "contentSubtitle": "Software Engineer Intern",
+                "contentDesc": "Worked with a PM/design intern to build a native Android application in Kotlin to aid field sellers of Surface devices. Allowed users to create requests for device issues based off machine-learning backed new request flow detection. Implemented searching, filtering, sorting, aggregation, and viewing of articles and requests from multiple sources. Worked with engineering contractor in India to coordinate backend structure and high priority deliverables. Presented to Devices Organization CVP as proof of concept for Surface Duo enterprise-level applications. Created Surface Duo Android application boilerplate code to aid in adaptive dual screen development. Assisted adjacent Android Developer Experience team by refactoring a sample app to use modern Android Jetpack libraries.",
                 "startDate": "May 2021",
-                "endDate": "August 2021"
+                "endDate": "August 2021",
+                "logoAsset": "msft_logo.png"
             },
             {
                 "contentTitle": "Dana-Farber Cancer Institute",
-                "contentPos": "Software Engineer Intern",
-                "contentDesc": "I worked at dfci",
+                "contentSubtitle": "Software Development Intern",
+                "contentDesc": "Designed and implemented semi-automated annotation software ClinicalRegex, creating a robust desktop application to be used in a large-scale cancer study done at 25 major national research hospitals (4 year study with over 12,000 subjects). Quickly adapted by over 10+ major national hospital systems for general research including Stanford, Mayo, and Harvard. Reduced the burden of manual chart review by >3,000 times, allowing for rapid review and annotation on large data sets. Increased the speed at which the text is parsed to be around 20 times faster than the previous version built in Flask. Technologies Used: Electron, Node, JavaScript, Vue, Spectron, Mocha, CircleCI, HTML 5, CSS, Bootstrap 4, and GitHub.",
                 "startDate": "May 2020",
-                "endDate": "May 2021"
+                "endDate": "May 2021",
+                "logoAsset": "dfci_logo.png"
             },
             {
-                "contentTitle": "Life365 Inc.",
-                "contentPos": "Product Engineer Intern",
-                "contentDesc": "I worked at Life360",
+                "contentTitle": "Life365",
+                "contentSubtitle": "Product Engineer Intern",
+                "contentDesc": "Simplified device configuration with custom Android software helping save nearly 30 minutes of labor per device. Reduction of offline/missing tablets to 0% through restructuring of device configuration procedure and installation scripts. Served as Interim CTO, leading efforts in troubleshooting product malfunction for a substantial client in a time-sensitive fashion. Created modular “Gold Master” shell script designed to allow for easy customization and proliferation pertaining to customer needs. Collaborated closely with marketing to produce devices and RPM kits based on market research and revenue-focused price points.",
                 "startDate": "June 2018",
-                "endDate": "May 2020"
+                "endDate": "May 2020",
+                "logoAsset": "life365_logo.png"
+            },
+            {
+                "contentTitle": "The Imaging Lyceum",
+                "contentSubtitle": "Research Assistant",
+                "contentDesc": "Assisted in the advancement of research in “lensless” camera technologies through machine/deep learning techniques. Worked with lab manager to create a presentation on current literature regarding NLP techniques for detecting sarcasm.",
+                "startDate": "January 2020",
+                "endDate": "May 2020",
+                "logoAsset": "asu_logo.png"
             }
         ],
         "isOpen": false
@@ -36,35 +48,28 @@
         "content": [
             {
                 "contentTitle": "TyroCode",
-                "contentDesc": "I worked on TyroCode"
+                "contentSubtitle": null,
+                "contentDesc": "Beginner-friendly text editor with remote code compilation allowing novices to avoid IDE/compiler setup and get coding quickly. Developed as an Electron desktop application using React and CodeX api for remote code compilation (an open source project I contributed to).",
+                "startDate": "May 2021",
+                "endDate": "Present",
+                "logoAsset": "tyrocode_logo.png"
+
             },
             {
                 "contentTitle": "SunLang",
-                "contentDesc": "I worked on SunLang"
+                "contentSubtitle": null,
+                "contentDesc": "A new dynamically typed programming language that combines common C language features with new-age syntax. Designed grammar, lexer, parser, and compiler from scratch. Coded in C++.",
+                "startDate": "January 2022",
+                "endDate": "Present",
+                "logoAsset": "sunlang_logo.png"
             },
             {
-                "contentTitle": "Refugee Tracker",
-                "contentDesc": "I worked on Refugee Tracker"
-            },
-            {
-                "contentTitle": "Refugee Tracker",
-                "contentDesc": "I worked on Refugee Tracker"
-            },
-            {
-                "contentTitle": "Refugee Tracker",
-                "contentDesc": "I worked on Refugee Tracker"
-            },
-            {
-                "contentTitle": "Refugee Tracker",
-                "contentDesc": "I worked on Refugee Tracker"
-            },
-            {
-                "contentTitle": "Refugee Tracker",
-                "contentDesc": "I worked on Refugee Tracker"
-            },
-            {
-                "contentTitle": "Refugee Tracker",
-                "contentDesc": "I worked on Refugee Tracker"
+                "contentTitle": "Refugee Camp & IDP Tracker",
+                "contentSubtitle": null,
+                "contentDesc": "Website that tracks and displays refugee/IDP statistics, camp locations, and relevant current events. Utilized Django, JavaScript, PostgreSQL, PostGIS, Flickr & NYT API.",
+                "startDate": "April 2020",
+                "endDate": "May 2020",
+                "logoAsset": "refugee_tracker_logo.png"
             }
         ],
         "isOpen": false
@@ -73,11 +78,19 @@
         "content": [
             {
                 "contentTitle": "Arizona State University - Barrett Honors College",
-                "contentDesc": "I went to ASU and studied Computer Science"
+                "contentSubtitle": "Computer Science B.S.",
+                "contentDesc": "I went to ASU and studied Computer Science. Relevant Coursework: Data Structures, Advanced Algorithms, Object-Oriented Programming, Distributed Software Development, Databases, Compilers, Operating Systems, Theory of Computation, Information AssuranceServed as an undergraduate teaching assistant for CSE 355 (Intro to Theoretical Computer Science) for two straight semesters. GPA: 4.00.",
+                "startDate": "August 2018",
+                "endDate": "May 2022",
+                "logoAsset": "asu_logo.png"
             },
             {
                 "contentTitle": "Arizona State University - Barrett Honors College",
-                "contentDesc": "I went to ASU and studied Computer Systems Engineering"
+                "contentSubtitle": "Computer Systems Engineering B.S.E.",
+                "contentDesc": "I went to ASU and studied Computer Systems Engineering. GPA: 4.00. Relevant Coursework: Operating Systems, Computer Architecture, Embedded Systems.",
+                "startDate": "August 2018",
+                "endDate": "May 2022",
+                "logoAsset": "asu_logo.png"
             }
         ],
         "isOpen": false
@@ -85,14 +98,106 @@
     "Awards": {
         "content": [
             {
-                "contentTitle": "Convocation Speaker",
-                "contentDesc": "I got to be the speaker at grad"
+                "contentTitle": "Engineering Convocation Speaker",
+                "contentSubtitle": "Arizona State University",
+                "contentDesc": "Selected as the speaker for the Spring 2022 ASU engineering graduation ceremony.",
+                "startDate": "May 2022",
+                "endDate": null,
+                "logoAsset": "asu_logo.png"
             },
             {
                 "contentTitle": "IMPACT Award",
-                "contentDesc": "I got the impact award"
+                "contentSubtitle": "Arizona State University",
+                "contentDesc": "1 of 10 engineering students to receive this award. Chosen upon graduation each spring and fall semester, distinguished graduates are honored for their significant contributions and accomplishments beyond the classroom. These students are recognized for excellence in one or more areas of research, leadership, public service and social entrepreneurship endeavors that have beneficially impacted the ASU community as well as larger communities in Arizona and elsewhere.",
+                "startDate": "May 2022",
+                "endDate": null,
+                "logoAsset": "asu_logo.png"
+            },
+            {
+                "contentTitle": "ON Semiconductor Scholarship",
+                "contentSubtitle": "Arizona State University",
+                "contentDesc": "One of four ASU students to receive this award. The ON Semiconductor Scholarship is a merit based scholarship for ASU engineering students sponsored by ON Semi.",
+                "startDate": "September 2019",
+                "endDate": null,
+                "logoAsset": "onsemi_logo.png"
+            },
+            {
+                "contentTitle": "Garmin Scholarship",
+                "contentSubtitle": "Arizona State University",
+                "contentDesc": "The Garmin Scholarship is a merit based scholarship for ASU engineering students sponsored by Garmin.",
+                "startDate": "May 2019",
+                "endDate": null,
+                "logoAsset": "garmin_logo.png"
+            },
+            {
+                "contentTitle": "RMEL Foundation Named Scholarship",
+                "contentSubtitle": "Arizona State University",
+                "contentDesc": "This scholarship is provided by the RMEL Foundation in the name of the individual or corporate donor. The selection criteria are: Goals and aspirations in the electric energy industry, Motivation to succeed, Service to community and school, Academic performance.",
+                "startDate": "April 2019",
+                "endDate": null,
+                "logoAsset": "rmel_logo.png"
+            },
+            {
+                "contentTitle": "RMEL Foundation Scholarship",
+                "contentSubtitle": "Arizona State University",
+                "contentDesc": "This scholarship is provided by the RMEL Foundation. The selection criteria are: Goals and aspirations in the electric energy industry, Motivation to succeed, Service to community and school, Academic performance.",
+                "startDate": "April 2018",
+                "endDate": null,
+                "logoAsset": "rmel_logo.png"
+            },
+            {
+                "contentTitle": "New American University President's Merit Scholarship",
+                "contentSubtitle": "Arizona State University",
+                "contentDesc": "Repeat merit-based scholarship essentially covering tuition for all 4 years of undergraduate studies at ASU.",
+                "startDate": "January 2018",
+                "endDate": null,
+                "logoAsset": "asu_logo.png"
+            }
+        ],
+        "isOpen": false
+    },
+    "Publications": {
+        "content": [
+            {
+                "contentTitle": "Associations Between Family Member Involvement and Outcomes of Patients Admitted to the Intensive Care Unit: Retrospective Cohort Study",
+                "contentSubtitle": "JMR Med Inform",
+                "contentDesc": "Background: Little is known about family member involvement, by relationship status, for patients treated in the intensive care unit (ICU). Objective: Using documentation of family interactions in clinical notes, we examined associations between child and spousal involvement and ICU patient outcomes, including goals of care conversations (GOCCs), limitations in life-sustaining therapy (LLST), and 3-month mortality.",
+                "startDate": "June 2022",
+                "endDate": null,
+                "logoAsset": "jmir_logo.png"
+            },
+            {
+                "contentTitle": "Patient Factors and Hospital Outcomes Associated With Atypical Presentation in Hospitalized Older Adults With COVID-19 During the First Surge of the Pandemic",
+                "contentSubtitle": "The Journals of Gerontology",
+                "contentDesc": "Background: Literature indicates an atypical presentation of COVID-19 among older adults (OAs). Objective: Our purpose is to identify the frequency of atypical presentation and compare demographic and clinical factors, and short-term outcomes, between typical versus atypical presentations in OAs hospitalized with COVID-19 during the first surge of the pandemic.",
+                "startDate": "July 2021",
+                "endDate": null,
+                "logoAsset": "jour_gero_logo.png"
+            }
+        ],
+        "isOpen": false
+    },
+    "Volunteering": {
+        "content": [
+            {
+                "contentTitle": "PCs for Refugees",
+                "contentSubtitle": "President",
+                "contentDesc": "Organized weekly volunteer service of cleaning, restoring, and preparing PCs for refugee families in Phoenix.",
+                "startDate": "August 2018",
+                "endDate": "May 2022",
+                "logoAsset": "pfr_logo.png"
+            },
+            {
+                "contentTitle": "Software Development Association",
+                "contentSubtitle": "Technical Development Director",
+                "contentDesc": "Lead efforts in developing interview training programs and technical development courses such as the annual coding bootcamp. Led industry connection program, bringing technology companies to speak and present career opportunities.",
+                "startDate": "December 2019",
+                "endDate": "January 2022",
+                "logoAsset": "soda_logo.png"
             }
         ],
         "isOpen": false
     }
 }
+
+

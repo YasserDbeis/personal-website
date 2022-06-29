@@ -1,10 +1,25 @@
 import { useEffect, useState } from 'react';
 import { FcFolder, FcOpenedFolder } from 'react-icons/fc';
 import Draggable from 'react-draggable';
+import { isMobile } from 'react-device-detect';
 import './Folder.css';
 
 const Folder = (props) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isDragging, setIsDragging] = useState(false);
+
+  const eventControl = (event) => {
+    if (event.type === 'mousemove' || event.type === 'touchmove') {
+      setIsDragging(true);
+    }
+
+    if (event.type === 'mouseup' || event.type === 'touchend') {
+      setTimeout(() => {
+        setIsDragging(false);
+        console.log('NOT DRAGGING');
+      }, 100);
+    }
+  };
 
   useEffect(() => {
     const newIsOpen = props.folderState[props.folderName].isOpen;
@@ -15,17 +30,32 @@ const Folder = (props) => {
   }, [props.folderState]);
 
   const onFolderClick = () => {
-    const newOpenState = !isOpen;
-    setIsOpen(newOpenState);
-    const folderStateCopy = JSON.parse(JSON.stringify(props.folderState));
-    folderStateCopy[props.folderName].isOpen = newOpenState;
-    props.setFolderState(folderStateCopy);
+    if (isDragging) {
+      return;
+    }
+
+    // alert('DOPE MONEY');
+
+    try {
+      const newOpenState = !isOpen;
+      setIsOpen(newOpenState);
+      const folderStateCopy = JSON.parse(JSON.stringify(props.folderState));
+      folderStateCopy[props.folderName].isOpen = newOpenState;
+      console.log(folderStateCopy);
+      props.setFolderState(folderStateCopy);
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   return (
-    <Draggable>
+    <Draggable onDrag={eventControl} onStop={eventControl}>
       <div className="folderContainer">
-        <div className="folderIconContainer" onClick={onFolderClick}>
+        <div
+          className="folderIconContainer"
+          onTouchEnd={isMobile ? () => onFolderClick() : null}
+          onClick={isMobile ? null : () => onFolderClick()}
+        >
           {props.folderState[props.folderName].isOpen ? (
             <FcOpenedFolder size={75} />
           ) : (

@@ -4,7 +4,6 @@ import Card from 'react-card-component';
 import ContentItem from '../ContentItem/ContentItem';
 import './Window.css';
 import './TrafficLight.css';
-
 import ScrollArea from 'react-scrollbar';
 import {
   BrowserView,
@@ -13,18 +12,19 @@ import {
   isMobile,
 } from 'react-device-detect';
 import { Resizable } from 're-resizable';
+import GitHubCalendar from 'react-github-calendar';
 
 const MAXIMIZED_SIZE = 80;
-const MINIMIZED_SIZE = 40;
+const MINIMIZED_SIZE = 60;
 
 const Window = (props) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const windowSize = isExpanded ? MAXIMIZED_SIZE : MINIMIZED_SIZE;
-  const itemHorizMargin = windowSize / 2;
+  const windowHeight = windowSize;
+  const windowWidth = windowSize * 1.1;
 
-  const [width, setWidth] = useState(windowSize);
-  const [height, setHeight] = useState(windowSize);
+  const itemHorizMargin = windowSize / 2;
 
   const closeBtnClickHandler = () => {
     const folderStateCopy = JSON.parse(JSON.stringify(props.folderState));
@@ -44,10 +44,10 @@ const Window = (props) => {
       <div
         className="window-container"
         style={{
-          top: `calc(50% - ${windowSize / 2}vh)`,
-          left: `calc(50% - ${windowSize / 2}vw)`,
-          minHeight: `${windowSize}px`,
-          minWidth: `${windowSize}px`,
+          top: `calc(50% - ${windowHeight / 2}vh)`,
+          left: `calc(50% - ${windowWidth / 2}vw)`,
+          minHeight: `${windowHeight}vh`,
+          minWidth: `${windowWidth}vw`,
         }}
       >
         <div
@@ -69,6 +69,17 @@ const Window = (props) => {
           >
             <strong className="cursor">
               <div className="drag-handle-div-container">
+                <div
+                  style={{
+                    position: 'absolute',
+                    width: '100%',
+                    textAlign: 'center',
+                    fontSize: '1rem',
+                    alignSelf: 'center',
+                  }}
+                >
+                  {props.folderName}
+                </div>
                 <div className="traffic-lights">
                   <button
                     className="traffic-light traffic-light-close"
@@ -109,23 +120,27 @@ const Window = (props) => {
                   style={{
                     fontSize: '12px',
                     color: 'white',
-                    height: `calc(${windowSize}vh - 35px)`,
-                    width: `calc(${windowSize}vw - 35px)`,
+                    height: `calc(${windowHeight}vh - 35px)`,
+                    width: `calc(${windowWidth}vw)`,
                     overflow: 'auto',
                   }}
                 >
+                  {props.folderName == 'Projects' && isBrowser ? (
+                    <GitHubCalendar
+                      style={{
+                        paddingLeft: '4vw',
+                        paddingRight: '4vw',
+                        paddingTop: '20px',
+                        paddingBlock: '20px',
+                      }}
+                      username="YasserDbeis"
+                    />
+                  ) : null}
                   {props.folderContent.map((entry, index) => {
                     return (
-                      <div
-                        key={index}
-                        className="card-item-container"
-                        // style={{
-                        //   marginLeft: `${itemHorizMargin.toString()}px`,
-                        //   marginRight: `${itemHorizMargin.toString()}px`,
-                        // }}
-                      >
+                      <div key={index} className="card-item-container">
                         <Card
-                          key={entry['contestTitle']}
+                          key={entry['contentTitle']}
                           bordered
                           outlined
                           glass
@@ -133,7 +148,10 @@ const Window = (props) => {
                           glassOption={{ blur: 100, transparency: 0.7 }}
                           className="window-content-item"
                         >
-                          <ContentItem content={entry} />
+                          <ContentItem
+                            folderName={props.folderName}
+                            content={entry}
+                          />
                         </Card>
                       </div>
                     );
