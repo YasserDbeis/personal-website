@@ -20,6 +20,12 @@ const ContentItem = (props) => {
     logoAsset,
   } = props.content;
 
+  let cursor = null;
+
+  useEffect(() => {
+    cursor = contentDesc ? 'pointer' : null;
+  }, []);
+
   const getIcon = (title) => {
     return (
       {
@@ -39,15 +45,27 @@ const ContentItem = (props) => {
     >
       <div
         className="unselectable"
-        style={{
-          width: '100%',
-          cursor: 'pointer',
-          fontSize: '32px',
-          fontWeight: 'bolder',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-        }}
+        style={
+          contentDesc
+            ? {
+                width: '100%',
+                cursor: 'pointer',
+                fontSize: '32px',
+                fontWeight: 'bolder',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+              }
+            : {
+                width: '100%',
+                cursor: 'default',
+                fontSize: '32px',
+                fontWeight: 'bolder',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+              }
+        }
         {...getToggleProps({
           onClick: () => setExpanded((prevExpanded) => !prevExpanded),
         })}
@@ -62,7 +80,7 @@ const ContentItem = (props) => {
         </span>
         <img
           src={require(`../../assets/${logoAsset}`)}
-          height={40}
+          height="100%"
           width={40}
           style={{
             // flexWrap: 'nowrap',
@@ -78,6 +96,7 @@ const ContentItem = (props) => {
           fontSize: '24px',
           fontWeight: 'bold',
           fontStyle: 'italic',
+          whiteSpace: 'pre-line',
         }}
       >
         {contentSubtitle}
@@ -96,34 +115,36 @@ const ContentItem = (props) => {
           <div>{startDate}</div>
         ) : null}
       </div>
-      <section {...getCollapseProps()}>
-        <div style={{ marginTop: '20px' }}>
-          {contentDesc.split(/\.\s|\.$/).map((sentence) => {
-            const trimmedSentence = sentence.trim();
+      {contentDesc ? (
+        <section {...getCollapseProps()}>
+          <div style={{ marginTop: '20px' }}>
+            {contentDesc.split(/\.\s|\.$/).map((sentence) => {
+              const trimmedSentence = sentence.trim();
 
-            if (trimmedSentence.length == 0) {
-              return null;
-            }
+              if (trimmedSentence.length == 0) {
+                return null;
+              }
 
-            return (
-              <div key={sentence} style={{ display: 'table' }}>
-                <div style={{ display: 'table-cell', paddingRight: '10px' }}>
-                  {getIcon(contentTitle)}
+              return (
+                <div key={sentence} style={{ display: 'table' }}>
+                  <div style={{ display: 'table-cell', paddingRight: '10px' }}>
+                    {getIcon(contentTitle)}
+                  </div>
+                  <div
+                    style={{
+                      fontSize: '16px',
+                      display: 'table-cell',
+                    }}
+                  >
+                    {trimmedSentence}
+                  </div>
+                  <br />
                 </div>
-                <div
-                  style={{
-                    fontSize: '16px',
-                    display: 'table-cell',
-                  }}
-                >
-                  {trimmedSentence}
-                </div>
-                <br />
-              </div>
-            );
-          })}
-        </div>
-      </section>
+              );
+            })}
+          </div>
+        </section>
+      ) : null}
     </div>
   );
 };

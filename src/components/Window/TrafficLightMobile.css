@@ -4,7 +4,7 @@
 .focus .traffic-lights > .traffic-light-close:active:hover, .traffic-lights:hover > .traffic-light-close:active:hover, .traffic-lights:active > .traffic-light-close:active:hover {
     background-color: #bf4942;
 }
-.focus .traffic-lights > .traffic-light-minimize, .traffic-lights:hover > .traffic-light-minimize, .traffic-lights > .traffic-light-minimize {
+/* .focus .traffic-lights > .traffic-light-minimize, .traffic-lights:hover > .traffic-light-minimize, .traffic-lights > .traffic-light-minimize {
     background-color: #ffbd2e;
 }
 .focus .traffic-lights > .traffic-light-minimize:active:hover, .traffic-lights:hover > .traffic-light-minimize:active:hover, .traffic-lights:active > .traffic-light-minimize:active:hover {
@@ -15,7 +15,7 @@
 }
 .focus .traffic-lights > .traffic-light-maximize:active:hover, .traffic-lights:hover > .traffic-light-maximize:active:hover, .traffic-lights:active > .traffic-light-maximize:active:hover {
     background-color: #1d9730;
-}
+} */
 .traffic-lights > .traffic-light:before, .traffic-lights > .traffic-light:after {
     visibility: hidden;
 }

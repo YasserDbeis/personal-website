@@ -7,7 +7,8 @@
                 "contentDesc": "Working on Android Developer Tools, specifically the Android Studio Profiler.",
                 "startDate": "August 2022",
                 "endDate": "Present",
-                "logoAsset": "google_logo.png"
+                "logoAsset": "google_logo.png",
+                "links": null
             },
             {
                 "contentTitle": "Microsoft",
@@ -15,7 +16,8 @@
                 "contentDesc": "Worked with a PM/design intern to build a native Android application in Kotlin to aid field sellers of Surface devices. Allowed users to create requests for device issues based off machine-learning backed new request flow detection. Implemented searching, filtering, sorting, aggregation, and viewing of articles and requests from multiple sources. Worked with engineering contractor in India to coordinate backend structure and high priority deliverables. Presented to Devices Organization CVP as proof of concept for Surface Duo enterprise-level applications. Created Surface Duo Android application boilerplate code to aid in adaptive dual screen development. Assisted adjacent Android Developer Experience team by refactoring a sample app to use modern Android Jetpack libraries.",
                 "startDate": "May 2021",
                 "endDate": "August 2021",
-                "logoAsset": "msft_logo.png"
+                "logoAsset": "msft_logo.png",
+                "links": null
             },
             {
                 "contentTitle": "Dana-Farber Cancer Institute",
@@ -23,7 +25,8 @@
                 "contentDesc": "Designed and implemented semi-automated annotation software ClinicalRegex, creating a robust desktop application to be used in a large-scale cancer study done at 25 major national research hospitals (4 year study with over 12,000 subjects). Quickly adapted by over 10+ major national hospital systems for general research including Stanford, Mayo, and Harvard. Reduced the burden of manual chart review by >3,000 times, allowing for rapid review and annotation on large data sets. Increased the speed at which the text is parsed to be around 20 times faster than the previous version built in Flask. Technologies Used: Electron, Node, JavaScript, Vue, Spectron, Mocha, CircleCI, HTML 5, CSS, Bootstrap 4, and GitHub.",
                 "startDate": "May 2020",
                 "endDate": "May 2021",
-                "logoAsset": "dfci_logo.png"
+                "logoAsset": "dfci_logo.png",
+                "links": null
             },
             {
                 "contentTitle": "Life365",
@@ -31,7 +34,8 @@
                 "contentDesc": "Simplified device configuration with custom Android software helping save nearly 30 minutes of labor per device. Reduction of offline/missing tablets to 0% through restructuring of device configuration procedure and installation scripts. Served as Interim CTO, leading efforts in troubleshooting product malfunction for a substantial client in a time-sensitive fashion. Created modular “Gold Master” shell script designed to allow for easy customization and proliferation pertaining to customer needs. Collaborated closely with marketing to produce devices and RPM kits based on market research and revenue-focused price points.",
                 "startDate": "June 2018",
                 "endDate": "May 2020",
-                "logoAsset": "life365_logo.png"
+                "logoAsset": "life365_logo.png",
+                "links": null
             },
             {
                 "contentTitle": "The Imaging Lyceum",
@@ -39,7 +43,8 @@
                 "contentDesc": "Assisted in the advancement of research in “lensless” camera technologies through machine/deep learning techniques. Worked with lab manager to create a presentation on current literature regarding NLP techniques for detecting sarcasm.",
                 "startDate": "January 2020",
                 "endDate": "May 2020",
-                "logoAsset": "asu_logo.png"
+                "logoAsset": "asu_logo.png",
+                "links": null
             }
         ],
         "isOpen": false
@@ -52,7 +57,10 @@
                 "contentDesc": "Beginner-friendly text editor with remote code compilation allowing novices to avoid IDE/compiler setup and get coding quickly. Developed as an Electron desktop application using React and CodeX api for remote code compilation (an open source project I contributed to).",
                 "startDate": "May 2021",
                 "endDate": "Present",
-                "logoAsset": "tyrocode_logo.png"
+                "logoAsset": "tyrocode_logo.png",
+                "links": {
+                    "github": "https://github.com/YasserDbeis/yscode"
+                }
 
             },
             {
@@ -61,7 +69,10 @@
                 "contentDesc": "A new dynamically typed programming language that combines common C language features with new-age syntax. Designed grammar, lexer, parser, and compiler from scratch. Coded in C++.",
                 "startDate": "January 2022",
                 "endDate": "Present",
-                "logoAsset": "sunlang_logo.png"
+                "logoAsset": "sunlang_logo.png",
+                "links": {
+                    "github": "https://github.com/YasserDbeis/SunLang"
+                }
             },
             {
                 "contentTitle": "Refugee Camp & IDP Tracker",
@@ -69,7 +80,10 @@
                 "contentDesc": "Website that tracks and displays refugee/IDP statistics, camp locations, and relevant current events. Utilized Django, JavaScript, PostgreSQL, PostGIS, Flickr & NYT API.",
                 "startDate": "April 2020",
                 "endDate": "May 2020",
-                "logoAsset": "refugee_tracker_logo.png"
+                "logoAsset": "refugee_tracker_logo.png",
+                "links": {
+                    "github": "https://github.com/YasserDbeis/Refugee-Tracker"
+                }
             }
         ],
         "isOpen": false
@@ -82,7 +96,8 @@
                 "contentDesc": "I went to ASU and studied Computer Science. Relevant Coursework: Data Structures, Advanced Algorithms, Object-Oriented Programming, Distributed Software Development, Databases, Compilers, Operating Systems, Theory of Computation, Information AssuranceServed as an undergraduate teaching assistant for CSE 355 (Intro to Theoretical Computer Science) for two straight semesters. GPA: 4.00.",
                 "startDate": "August 2018",
                 "endDate": "May 2022",
-                "logoAsset": "asu_logo.png"
+                "logoAsset": "asu_logo.png",
+                "links": null
             },
             {
                 "contentTitle": "Arizona State University - Barrett Honors College",
@@ -90,7 +105,8 @@
                 "contentDesc": "I went to ASU and studied Computer Systems Engineering. Relevant Coursework: Operating Systems, Computer Architecture, Embedded Systems. GPA: 4.00.",
                 "startDate": "August 2018",
                 "endDate": "May 2022",
-                "logoAsset": "asu_logo.png"
+                "logoAsset": "asu_logo.png",
+                "links": null
             }
         ],
         "isOpen": false
@@ -103,7 +119,10 @@
                 "contentDesc": "Selected as the speaker for the Spring 2022 ASU engineering graduation ceremony.",
                 "startDate": "May 2022",
                 "endDate": null,
-                "logoAsset": "asu_logo.png"
+                "logoAsset": "asu_logo.png",
+                "links": {
+                    "youtube": "https://youtu.be/cB1YFgrP7PU"
+                }
             },
             {
                 "contentTitle": "IMPACT Award",
@@ -111,7 +130,10 @@
                 "contentDesc": "1 of 10 engineering students to receive this award. Chosen upon graduation each spring and fall semester, distinguished graduates are honored for their significant contributions and accomplishments beyond the classroom. These students are recognized for excellence in one or more areas of research, leadership, public service and social entrepreneurship endeavors that have beneficially impacted the ASU community as well as larger communities in Arizona and elsewhere.",
                 "startDate": "May 2022",
                 "endDate": null,
-                "logoAsset": "asu_logo.png"
+                "logoAsset": "asu_logo.png",
+                "links": {
+                    "link": "https://news.asu.edu/20220502-computer-science-grad-helped-his-peers-and-wider-phoenix-community"
+                }
             },
             {
                 "contentTitle": "ON Semiconductor Scholarship",
@@ -119,7 +141,10 @@
                 "contentDesc": "One of four ASU students to receive this award. The ON Semiconductor Scholarship is a merit based scholarship for ASU engineering students sponsored by ON Semi.",
                 "startDate": "September 2019",
                 "endDate": null,
-                "logoAsset": "onsemi_logo.png"
+                "logoAsset": "onsemi_logo.png",
+                "links": {
+                    "link": "https://www.asufoundation.org/education-and-scholarship/donor-named-funds/on-semiconductor-engineering-scholarship-CA107945.html?cgid=named"
+                }
             },
             {
                 "contentTitle": "Garmin Scholarship",
@@ -127,7 +152,10 @@
                 "contentDesc": "The Garmin Scholarship is a merit based scholarship for ASU engineering students sponsored by Garmin.",
                 "startDate": "May 2019",
                 "endDate": null,
-                "logoAsset": "garmin_logo.png"
+                "logoAsset": "garmin_logo.png",
+                "links": {
+                    "link": "https://www.garmin.com/en-US/"
+                }
             },
             {
                 "contentTitle": "RMEL Foundation Named Scholarship",
@@ -135,7 +163,10 @@
                 "contentDesc": "This scholarship is provided by the RMEL Foundation in the name of the individual or corporate donor. The selection criteria are: Goals and aspirations in the electric energy industry, Motivation to succeed, Service to community and school, Academic performance.",
                 "startDate": "April 2019",
                 "endDate": null,
-                "logoAsset": "rmel_logo.png"
+                "logoAsset": "rmel_logo.png",
+                "links": {
+                    "link": "https://www.rmelfoundation.org/new-page"
+                }
             },
             {
                 "contentTitle": "RMEL Foundation Scholarship",
@@ -143,7 +174,10 @@
                 "contentDesc": "This scholarship is provided by the RMEL Foundation. The selection criteria are: Goals and aspirations in the electric energy industry, Motivation to succeed, Service to community and school, Academic performance.",
                 "startDate": "April 2018",
                 "endDate": null,
-                "logoAsset": "rmel_logo.png"
+                "logoAsset": "rmel_logo.png",
+                "links": {
+                    "link": "https://www.rmelfoundation.org/new-page"
+                }
             },
             {
                 "contentTitle": "New American University President's Merit Scholarship",

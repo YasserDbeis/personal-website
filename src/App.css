@@ -1,7 +1,5 @@
 .App {
-  background-image: url('./assets/WaveBLUE.jpg');
-  background-position: center;
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -36,6 +34,6 @@
   }
 }
 
-#foldersContainer {
+/* #foldersContainer {
   flex-basis: 50%;
-}
+} */

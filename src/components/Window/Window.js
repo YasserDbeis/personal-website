@@ -13,12 +13,13 @@ import {
 } from 'react-device-detect';
 import { Resizable } from 're-resizable';
 import GitHubCalendar from 'react-github-calendar';
+import TrafficLights from './TrafficLights';
 
 const MAXIMIZED_SIZE = 80;
 const MINIMIZED_SIZE = 60;
 
 const Window = (props) => {
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(isMobile);
 
   const windowSize = isExpanded ? MAXIMIZED_SIZE : MINIMIZED_SIZE;
   const windowHeight = windowSize;
@@ -26,21 +27,11 @@ const Window = (props) => {
 
   const itemHorizMargin = windowSize / 2;
 
-  const closeBtnClickHandler = () => {
-    const folderStateCopy = JSON.parse(JSON.stringify(props.folderState));
-    folderStateCopy[props.folderName].isOpen = false;
-    props.setFolderState(folderStateCopy);
-  };
-
-  const expandBtnClickHandler = (isExpanded) => {
-    setIsExpanded(isExpanded);
-  };
-
   useEffect(() => {
     if (isMobile) {
       require('./TrafficLightMobile.css');
     } else {
-      require('./TrafficLightMobile.css');
+      require('./TrafficLightDesktop.css');
     }
   }, []);
 
@@ -75,49 +66,13 @@ const Window = (props) => {
             glassOption={{ blur: 100, transparency: 0.2 }}
             style={{ height: '100%', width: '100%' }}
           >
-            <strong className="cursor">
-              <div className="drag-handle-div-container">
-                <div
-                  style={{
-                    position: 'absolute',
-                    width: '100%',
-                    textAlign: 'center',
-                    fontSize: '1rem',
-                    alignSelf: 'center',
-                  }}
-                >
-                  {props.folderName}
-                </div>
-                <div className="traffic-lights">
-                  <button
-                    className="traffic-light traffic-light-close"
-                    id="close"
-                    onTouchStart={isMobile ? closeBtnClickHandler : null}
-                    onClick={isMobile ? null : closeBtnClickHandler}
-                  ></button>
-                  <button
-                    className="traffic-light traffic-light-minimize"
-                    id="minimize"
-                    onTouchStart={
-                      isMobile ? () => expandBtnClickHandler(false) : null
-                    }
-                    onClick={
-                      isMobile ? null : () => expandBtnClickHandler(false)
-                    }
-                  ></button>
-                  <button
-                    className="traffic-light traffic-light-maximize"
-                    id="maximize"
-                    onTouchStart={
-                      isMobile ? () => expandBtnClickHandler(true) : null
-                    }
-                    onClick={
-                      isMobile ? null : () => expandBtnClickHandler(true)
-                    }
-                  ></button>
-                </div>
-              </div>
-            </strong>
+            <TrafficLights
+              folderState={props.folderState}
+              setFolderState={props.setFolderState}
+              setIsExpanded={setIsExpanded}
+              folderName={props.folderName}
+            />
+
             <div
               className="window-content-container"
               style={{ height: '100%', width: '100%' }}
@@ -140,6 +95,8 @@ const Window = (props) => {
                         paddingRight: '4vw',
                         paddingTop: '20px',
                         paddingBottom: '10px',
+                        margin: '0 auto',
+                        maxWidth: '90%',
                       }}
                       username="YasserDbeis"
                     />

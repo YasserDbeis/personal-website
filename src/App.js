@@ -6,6 +6,7 @@ import Window from './components/Window/Window';
 
 import { useState } from 'react';
 import Draggable from 'react-draggable';
+import Welcome from './components/Welcome/Welcome';
 
 function App() {
   const [folderState, setFolderState] = useState(
@@ -13,20 +14,41 @@ function App() {
   );
 
   const [folderSelectionName, setFolderSelectionName] = useState(null);
+  const [showWelcome, setShowWelcome] = useState(true);
 
   // console.log(Array.from(Object.keys(folderContent)));
   return (
     <div className="App">
-      {Array.from(Object.keys(folderContent)).map((folderName) => {
-        return (
-          <Folder
-            key={folderName}
-            folderState={folderState}
-            setFolderState={setFolderState}
-            folderName={folderName}
-          />
-        );
-      })}
+      {showWelcome ? (
+        <div
+          style={{
+            height: '100vh',
+            width: '100vw',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}
+          onClick={() => {
+            setShowWelcome(false);
+          }}
+        >
+          <Welcome />{' '}
+        </div>
+      ) : (
+        <div>
+          {Array.from(Object.keys(folderContent)).map((folderName) => {
+            return (
+              <Folder
+                key={folderName}
+                folderState={folderState}
+                setFolderState={setFolderState}
+                folderName={folderName}
+              />
+            );
+          })}
+        </div>
+      )}
+
       {Object.entries(folderState).map((folder) => {
         const folderName = folder[0];
         const folderData = folder[1];
