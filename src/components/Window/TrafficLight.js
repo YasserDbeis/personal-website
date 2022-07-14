@@ -1,14 +1,15 @@
 import { useState, useEffect } from 'react';
 import { isMobile } from 'react-device-detect';
+import './TrafficLightDesktop.css';
 
 const TrafficLight = (props) => {
-  useEffect(() => {
-    if (isMobile) {
-      require('./TrafficLightMobile.css');
-    } else {
-      require('./TrafficLightDesktop.css');
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (isMobile) {
+  //     require('./TrafficLightMobile.css');
+  //   } else {
+  //     require('./TrafficLightDesktop.css');
+  //   }
+  // }, []);
 
   const closeBtnClickHandler = () => {
     const folderStateCopy = JSON.parse(JSON.stringify(props.folderState));

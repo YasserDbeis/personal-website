@@ -22,7 +22,7 @@ const SocialLinks = (props) => {
                 height={25}
                 style={{
                   cursor: 'pointer',
-                  marginRight: '5px',
+                  marginleft: '5px',
                 }}
               />
             </a>
@@ -34,7 +34,7 @@ const SocialLinks = (props) => {
             key={url}
             target="_blank"
             rel="noopener noreferrer"
-            style={{ height: 25, width: 25, marginRight: '5px' }}
+            style={{ height: 25, width: 25, marginLeft: '5px' }}
             network={network}
             url={url}
             fgColor="white"
