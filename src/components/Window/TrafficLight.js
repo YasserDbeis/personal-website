@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { isMobile } from 'react-device-detect';
 
 const TrafficLight = (props) => {
