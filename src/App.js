@@ -1,5 +1,7 @@
 import logo from './logo.svg';
 import folderContent from './content/FolderContent.json';
+import socialLinks from './content/SocialLinks.json';
+
 import './App.css';
 import Folder from './components/Folder/Folder';
 import Window from './components/Window/Window';
@@ -7,6 +9,7 @@ import Window from './components/Window/Window';
 import { useState } from 'react';
 import Draggable from 'react-draggable';
 import Welcome from './components/Welcome/Welcome';
+import SocialLinks from './components/SocialLinks/SocialLinks';
 
 function App() {
   const [folderState, setFolderState] = useState(
@@ -16,6 +19,7 @@ function App() {
   const [folderSelectionName, setFolderSelectionName] = useState(null);
   const [showWelcome, setShowWelcome] = useState(true);
 
+  const links = JSON.parse(JSON.stringify(socialLinks));
   // console.log(Array.from(Object.keys(folderContent)));
   return (
     <div className="App">
@@ -73,6 +77,17 @@ function App() {
         // if(isOpen) {
         //   return <Window folderName={folder./>
       })}
+
+      <div
+        style={{
+          position: 'absolute',
+          bottom: '0',
+          right: '0',
+          marginBottom: '-15px',
+        }}
+      >
+        <SocialLinks links={links} />
+      </div>
     </div>
   );
 }

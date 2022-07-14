@@ -185,7 +185,10 @@
                 "contentDesc": "Repeat merit-based scholarship essentially covering tuition for all 4 years of undergraduate studies at ASU.",
                 "startDate": "January 2018",
                 "endDate": null,
-                "logoAsset": "asu_logo.png"
+                "logoAsset": "asu_logo.png",
+                "links": {
+                    "link": "https://students.asu.edu/scholarships/newamericanuniversity"
+                }
             }
         ],
         "isOpen": false
@@ -198,7 +201,10 @@
                 "contentDesc": "Background: Little is known about family member involvement, by relationship status, for patients treated in the intensive care unit (ICU). Objective: Using documentation of family interactions in clinical notes, we examined associations between child and spousal involvement and ICU patient outcomes, including goals of care conversations (GOCCs), limitations in life-sustaining therapy (LLST), and 3-month mortality.",
                 "startDate": "June 2022",
                 "endDate": null,
-                "logoAsset": "jmir_logo.png"
+                "logoAsset": "jmir_logo.png",
+                "links": {
+                    "link": "https://pubmed.ncbi.nlm.nih.gov/35704362/"
+                }
             },
             {
                 "contentTitle": "Patient Factors and Hospital Outcomes Associated With Atypical Presentation in Hospitalized Older Adults With COVID-19 During the First Surge of the Pandemic",
@@ -206,7 +212,10 @@
                 "contentDesc": "Background: Literature indicates an atypical presentation of COVID-19 among older adults (OAs). Objective: Our purpose is to identify the frequency of atypical presentation and compare demographic and clinical factors, and short-term outcomes, between typical versus atypical presentations in OAs hospitalized with COVID-19 during the first surge of the pandemic.",
                 "startDate": "July 2021",
                 "endDate": null,
-                "logoAsset": "jour_gero_logo.png"
+                "logoAsset": "jour_gero_logo.png",
+                "links": {
+                    "link": "https://pubmed.ncbi.nlm.nih.gov/34279628/"
+                }
             }
         ],
         "isOpen": false
@@ -219,7 +228,10 @@
                 "contentDesc": "Organized weekly volunteer service of cleaning, restoring, and preparing PCs for refugee families in Phoenix.",
                 "startDate": "August 2018",
                 "endDate": "May 2022",
-                "logoAsset": "pfr_logo.png"
+                "logoAsset": "pfr_logo.png",
+                "links": {
+                    "link": "https://pcsforrefugees.com/"
+                }
             },
             {
                 "contentTitle": "Software Development Association",
@@ -227,7 +239,10 @@
                 "contentDesc": "Lead efforts in developing interview training programs and technical development courses such as the annual coding bootcamp. Led industry connection program, bringing technology companies to speak and present career opportunities.",
                 "startDate": "December 2019",
                 "endDate": "January 2022",
-                "logoAsset": "soda_logo.png"
+                "logoAsset": "soda_logo.png",
+                "links": {
+                    "link": "https://thesoda.io/"
+                }
             }
         ],
         "isOpen": false

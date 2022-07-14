@@ -9,9 +9,9 @@ const Welcome = (props) => {
       style={{
         height: 'fit-content',
         width: 'fit-content',
-        'text-align': 'center',
+        textAlign: 'center',
         padding: '10px',
-        'z-index': 1,
+        zIndex: 1,
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
@@ -30,7 +30,7 @@ const Welcome = (props) => {
         <div>
           <span
             style={{
-              fontSize: '32px',
+              fontSize: '60px',
               fontWeight: 'bolder',
               fontStyle: 'italic',
             }}
@@ -43,7 +43,8 @@ const Welcome = (props) => {
               fontSize: '24px',
             }}
           >
-            My name is Yasser Dbeis and I am a software engineer.
+            My name is <strong>Yasser Dbeis</strong> and I am a{' '}
+            <strong>software engineer</strong>.
           </span>
           <br />
           <span

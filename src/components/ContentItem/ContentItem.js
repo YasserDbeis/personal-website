@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import useCollapse from 'react-collapsed';
 import { FaMicrosoft, FaGoogle, FaHospital, FaStar } from 'react-icons/fa';
 import { TbDeviceHeartMonitor } from 'react-icons/tb';
+import SocialLinks from '../SocialLinks/SocialLinks';
 
 const ContentItem = (props) => {
   const [isExpanded, setExpanded] = useState(false);
@@ -18,13 +19,8 @@ const ContentItem = (props) => {
     startDate,
     endDate,
     logoAsset,
+    links,
   } = props.content;
-
-  let cursor = null;
-
-  useEffect(() => {
-    cursor = contentDesc ? 'pointer' : null;
-  }, []);
 
   const getIcon = (title) => {
     return (
@@ -145,6 +141,7 @@ const ContentItem = (props) => {
           </div>
         </section>
       ) : null}
+      {links ? <SocialLinks links={links} /> : null}
     </div>
   );
 };
