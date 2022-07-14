@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { isMobile } from 'react-device-detect';
 
-const TrafficLights = (props) => {
+const TrafficLight = (props) => {
   const closeBtnClickHandler = () => {
     const folderStateCopy = JSON.parse(JSON.stringify(props.folderState));
     folderStateCopy[props.folderName].isOpen = false;
@@ -49,4 +49,4 @@ const TrafficLights = (props) => {
   );
 };
 
-export default TrafficLights;
+export default TrafficLight;

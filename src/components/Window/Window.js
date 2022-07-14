@@ -13,7 +13,7 @@ import {
 } from 'react-device-detect';
 import { Resizable } from 're-resizable';
 import GitHubCalendar from 'react-github-calendar';
-import TrafficLights from './TrafficLights';
+import TrafficLight from './TrafficLight';
 
 const MAXIMIZED_SIZE = 80;
 const MINIMIZED_SIZE = 60;
@@ -66,7 +66,7 @@ const Window = (props) => {
             glassOption={{ blur: 100, transparency: 0.2 }}
             style={{ height: '100%', width: '100%' }}
           >
-            <TrafficLights
+            <TrafficLight
               folderState={props.folderState}
               setFolderState={props.setFolderState}
               setIsExpanded={setIsExpanded}

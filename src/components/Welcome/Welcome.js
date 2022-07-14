@@ -1,7 +1,6 @@
 import { useEffect, useState, useRef } from 'react';
 import Card from 'react-card-component';
 import Draggable from 'react-draggable';
-import TrafficLights from '../Window/TrafficLights';
 import { isMobile } from 'react-device-detect';
 
 const Welcome = (props) => {

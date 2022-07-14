@@ -58,28 +58,3 @@
 .traffic-light-close:active:hover:before, .traffic-light-close:active:hover:after {
     background-color: #190000;
 }
-.traffic-light-minimize:before {
-    background-color: #995700;
-    width: 8px;
-    height: 1px;
-}
-.traffic-light-minimize:active:hover:before {
-    background-color: #592800;
-}
-.traffic-light-maximize:before {
-    background-color: #006500;
-    width: 6px;
-    height: 6px;
-}
-.traffic-light-maximize:after {
-    background-color: #28c941;
-    width: 10px;
-    height: 2px;
-    transform: rotate(45deg);
-}
-.traffic-light-maximize:active:hover:before {
-    background-color: #003200;
-}
-.traffic-light-maximize:active:hover:after {
-    background-color: #1d9730;
-}
