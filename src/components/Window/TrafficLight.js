@@ -2,6 +2,14 @@ import { useState } from 'react';
 import { isMobile } from 'react-device-detect';
 
 const TrafficLight = (props) => {
+  useEffect(() => {
+    if (isMobile) {
+      require('./TrafficLightMobile.css');
+    } else {
+      require('./TrafficLightDesktop.css');
+    }
+  }, []);
+
   const closeBtnClickHandler = () => {
     const folderStateCopy = JSON.parse(JSON.stringify(props.folderState));
     folderStateCopy[props.folderName].isOpen = false;

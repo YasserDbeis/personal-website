@@ -27,14 +27,6 @@ const Window = (props) => {
 
   const itemHorizMargin = windowSize / 2;
 
-  useEffect(() => {
-    if (isMobile) {
-      require('./TrafficLightMobile.css');
-    } else {
-      require('./TrafficLightDesktop.css');
-    }
-  }, []);
-
   return (
     <Draggable
       // bounds={{ top: -200, left: -200, right: 200, bottom: 200 }}

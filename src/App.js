@@ -11,7 +11,12 @@ import Draggable from 'react-draggable';
 import Welcome from './components/Welcome/Welcome';
 import SocialLinks from './components/SocialLinks/SocialLinks';
 
+import { PreventOrientation } from 'prevent-orientation';
+
 function App() {
+  // Prevent to landscape orientation for mobile
+  new PreventOrientation().preventLandscape();
+
   const [folderState, setFolderState] = useState(
     JSON.parse(JSON.stringify(folderContent))
   );
@@ -81,9 +86,12 @@ function App() {
       <div
         style={{
           position: 'absolute',
-          bottom: '0',
-          right: '0',
+          left: '50%',
+          bottom: '0px',
+          WebkitTransform: 'translateX(-50%)',
+          transform: 'translateX(-50%)',
           marginBottom: '-15px',
+          textAlign: 'center',
         }}
       >
         <SocialLinks links={links} />

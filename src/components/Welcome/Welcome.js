@@ -43,8 +43,9 @@ const Welcome = (props) => {
               fontSize: '24px',
             }}
           >
-            My name is <strong>Yasser Dbeis</strong> and I am a{' '}
-            <strong>software engineer</strong>.
+            My name is <span style={{ fontWeight: 'bold' }}>Yasser Dbeis</span>{' '}
+            and I am a{' '}
+            <span style={{ fontWeight: 'bold' }}>software engineer</span>.
           </span>
           <br />
           <span
