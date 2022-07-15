@@ -71,6 +71,7 @@ const ContentItem = (props) => {
         >
           {contentTitle}
         </span>
+
         <img
           src={require(`../../assets/${logoAsset}`)}
           height="100%"
@@ -94,10 +95,12 @@ const ContentItem = (props) => {
       >
         {contentSubtitle}
       </div>
+
       <div
         style={{
           fontSize: '18px',
           fontStyle: 'italic',
+          marginBottom: '20px',
         }}
       >
         {startDate && endDate ? (
@@ -110,7 +113,7 @@ const ContentItem = (props) => {
       </div>
       {contentDesc ? (
         <section {...getCollapseProps()}>
-          <div style={{ marginTop: '20px' }}>
+          <div>
             {contentDesc.split(/\.\s|\.$/).map((sentence) => {
               const trimmedSentence = sentence.trim();
 
@@ -136,9 +139,9 @@ const ContentItem = (props) => {
               );
             })}
           </div>
-          {links ? <SocialLinks links={links} /> : null}
         </section>
       ) : null}
+      {links ? <SocialLinks links={links} /> : null}
     </div>
   );
 };

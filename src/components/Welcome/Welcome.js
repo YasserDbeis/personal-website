@@ -27,7 +27,7 @@ const Welcome = (props) => {
         }}
       >
         <img height={200} src={require(`../../assets/me_2.png`)} />
-        <div>
+        <div style={{ color: 'whitesmoke' }}>
           <span
             style={{
               fontSize: '60px',
@@ -35,7 +35,12 @@ const Welcome = (props) => {
               fontStyle: 'italic',
             }}
           >
-            Welcome!
+            <span style={{ color: '#4285F4' }}>H</span>
+            <span style={{ color: '#DB4437' }}>e</span>
+            <span style={{ color: '#F4B400' }}>l</span>
+            <span style={{ color: '#4285F4' }}>l</span>
+            <span style={{ color: '#0F9D58' }}>o</span>
+            <span style={{ color: '#DB4437' }}>!</span>
           </span>
           <br />
           <span
@@ -43,9 +48,13 @@ const Welcome = (props) => {
               fontSize: '24px',
             }}
           >
-            My name is <span style={{ fontWeight: 'bold' }}>Yasser Dbeis</span>{' '}
+            My name is{' '}
+            <span style={{ fontWeight: 'bold', fontStyle: 'italic' }}>
+              Yasser Dbeis
+            </span>{' '}
             and I am a{' '}
-            <span style={{ fontWeight: 'bold' }}>software engineer</span>.
+            <span style={{ fontWeight: 'bold', fontStyle: 'italic' }}>SWE</span>
+            .
           </span>
           <br />
           <span

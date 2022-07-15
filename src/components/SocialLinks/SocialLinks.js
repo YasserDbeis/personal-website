@@ -8,7 +8,6 @@ const SocialLinks = (props) => {
         display: 'inline-block',
         float: 'right',
         marginBottom: '20px',
-        marginTop: '10px',
       }}
     >
       {Object.entries(props.links).map((link) => {
