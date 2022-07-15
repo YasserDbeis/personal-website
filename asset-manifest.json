@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/personal-website/static/css/main.aaff3b21.css",
+    "main.js": "/personal-website/static/js/main.bccbe6e2.js",
+    "static/css/990.65635758.chunk.css": "/personal-website/static/css/990.65635758.chunk.css",
+    "static/js/990.0f854f97.chunk.js": "/personal-website/static/js/990.0f854f97.chunk.js",
+    "static/css/591.81e537e3.chunk.css": "/personal-website/static/css/591.81e537e3.chunk.css",
+    "static/js/591.bfad8cc8.chunk.js": "/personal-website/static/js/591.bfad8cc8.chunk.js",
+    "static/media/Wavey.jpg": "/personal-website/static/media/Wavey.03acf08709d822e02e83.jpg",
+    "static/media/asu_logo.png": "/personal-website/static/media/asu_logo.545babafae4b4edd7987.png",
+    "static/media/me_2.png": "/personal-website/static/media/me_2.39503718aa0fe2c34890.png",
+    "static/media/me.png": "/personal-website/static/media/me.52ab7f34e25db59a750c.png",
+    "static/media/me_laugh.png": "/personal-website/static/media/me_laugh.01b07b251f2445ccb1c3.png",
+    "static/media/refugee_tracker_logo.png": "/personal-website/static/media/refugee_tracker_logo.d17492eaee967dc09e6f.png",
+    "static/media/WaveBLUE.jpg": "/personal-website/static/media/WaveBLUE.e537884b7a537ece6981.jpg",
+    "static/media/tyrocode_logo.png": "/personal-website/static/media/tyrocode_logo.79eae75d8b334c403111.png",
+    "static/media/sunlang_logo.png": "/personal-website/static/media/sunlang_logo.1c51b7cc15e3d85d5cc8.png",
+    "static/media/onsemi_logo.png": "/personal-website/static/media/onsemi_logo.580933a3ca2db6bef8b5.png",
+    "static/media/google_logo.png": "/personal-website/static/media/google_logo.0590aaf0fe36e23dcc8c.png",
+    "static/media/pfr_logo.png": "/personal-website/static/media/pfr_logo.07d3ffe83bd75243700e.png",
+    "static/media/rmel_logo.png": "/personal-website/static/media/rmel_logo.726779ee38fd009847a4.png",
+    "static/media/jour_gero_logo.png": "/personal-website/static/media/jour_gero_logo.31afa759c9f0f340a524.png",
+    "static/media/link_icon.jpg": "/personal-website/static/media/link_icon.0fa9c3bcf71eeaa1f062.jpg",
+    "static/media/dfci_logo.png": "/personal-website/static/media/dfci_logo.417e0fe083793530f01e.png",
+    "static/media/soda_logo.png": "/personal-website/static/media/soda_logo.c877b0d3580e469d0395.png",
+    "static/media/logo.svg": "/personal-website/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/personal-website/index.html",
+    "main.aaff3b21.css.map": "/personal-website/static/css/main.aaff3b21.css.map",
+    "main.bccbe6e2.js.map": "/personal-website/static/js/main.bccbe6e2.js.map",
+    "990.65635758.chunk.css.map": "/personal-website/static/css/990.65635758.chunk.css.map",
+    "990.0f854f97.chunk.js.map": "/personal-website/static/js/990.0f854f97.chunk.js.map",
+    "591.81e537e3.chunk.css.map": "/personal-website/static/css/591.81e537e3.chunk.css.map",
+    "591.bfad8cc8.chunk.js.map": "/personal-website/static/js/591.bfad8cc8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.aaff3b21.css",
+    "static/js/main.bccbe6e2.js"
+  ]
+}
