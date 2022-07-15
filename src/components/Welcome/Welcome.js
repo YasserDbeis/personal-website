@@ -26,7 +26,7 @@ const Welcome = (props) => {
           padding: '20px',
         }}
       >
-        <img height={200} src={require(`../../assets/me.png`)} />
+        <img height={200} src={require(`../../assets/me_2.png`)} />
         <div>
           <span
             style={{

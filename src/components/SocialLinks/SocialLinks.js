@@ -8,6 +8,7 @@ const SocialLinks = (props) => {
         display: 'inline-block',
         float: 'right',
         marginBottom: '20px',
+        marginTop: '10px',
       }}
     >
       {Object.entries(props.links).map((link) => {
@@ -15,11 +16,17 @@ const SocialLinks = (props) => {
 
         if (network === 'link') {
           return (
-            <a key={url} target="_blank" rel="noopener noreferrer" href={url}>
+            <a
+              key={url}
+              target="_blank"
+              onClick={(event) => event.stopPropagation()}
+              rel="noopener noreferrer"
+              href={url}
+            >
               <img
-                src={require(`../../assets/link_icon.png`)}
-                width={25}
-                height={25}
+                src={require(`../../assets/link_icon.jpg`)}
+                width={40}
+                height={40}
                 style={{
                   cursor: 'pointer',
                   marginleft: '5px',
@@ -33,8 +40,9 @@ const SocialLinks = (props) => {
           <SocialIcon
             key={url}
             target="_blank"
+            onClick={(event) => event.stopPropagation()}
             rel="noopener noreferrer"
-            style={{ height: 25, width: 25, marginLeft: '5px' }}
+            style={{ height: 40, width: 40, marginLeft: '5px' }}
             network={network}
             url={url}
             fgColor="white"

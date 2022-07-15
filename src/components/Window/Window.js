@@ -19,9 +19,9 @@ const MAXIMIZED_SIZE = 80;
 const MINIMIZED_SIZE = 60;
 
 const Window = (props) => {
-  const [isExpanded, setIsExpanded] = useState(isMobile);
+  const [isWindowExpanded, setWindowExpanded] = useState(isMobile);
 
-  const windowSize = isExpanded ? MAXIMIZED_SIZE : MINIMIZED_SIZE;
+  const windowSize = isWindowExpanded ? MAXIMIZED_SIZE : MINIMIZED_SIZE;
   const windowHeight = windowSize;
   const windowWidth = windowSize * 1.1;
 
@@ -61,7 +61,7 @@ const Window = (props) => {
             <TrafficLight
               folderState={props.folderState}
               setFolderState={props.setFolderState}
-              setIsExpanded={setIsExpanded}
+              setIsExpanded={setWindowExpanded}
               folderName={props.folderName}
             />
 
@@ -95,13 +95,17 @@ const Window = (props) => {
                   ) : null}
                   {props.folderContent.map((entry, index) => {
                     return (
-                      <div key={index} className="card-item-container">
+                      <div
+                        key={index}
+                        className="card-item-container"
+                        style={{ cursor: 'pointer' }}
+                      >
                         <Card
                           key={entry['contentTitle']}
                           bordered
                           outlined
                           glass
-                          hoverType={isDesktop ? 'zoom' : 'up'}
+                          hoverType={isDesktop ? 'zoom' : null}
                           glassOption={{ blur: 100, transparency: 0.7 }}
                           className="window-content-item"
                         >

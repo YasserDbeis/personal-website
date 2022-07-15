@@ -1,4 +1,10 @@
-import { useEffect, useRef, useState } from 'react';
+import {
+  useEffect,
+  useRef,
+  useState,
+  forwardRef,
+  useImperativeHandle,
+} from 'react';
 import useCollapse from 'react-collapsed';
 import { FaMicrosoft, FaGoogle, FaHospital, FaStar } from 'react-icons/fa';
 import { TbDeviceHeartMonitor } from 'react-icons/tb';
@@ -6,11 +12,15 @@ import SocialLinks from '../SocialLinks/SocialLinks';
 
 const ContentItem = (props) => {
   const [isExpanded, setExpanded] = useState(false);
+  const { getCollapseProps, getToggleProps } = useCollapse({ isExpanded });
+
+  const toggleExpand = () => {
+    setExpanded(!isExpanded);
+  };
 
   const expandStyles = {
     backgroundColor: 'red',
   };
-  const { getCollapseProps, getToggleProps } = useCollapse({ isExpanded });
 
   const {
     contentTitle,
@@ -37,34 +47,21 @@ const ContentItem = (props) => {
     <div
       style={{
         padding: '20px',
+        height: '100%',
       }}
+      onClick={toggleExpand}
     >
       <div
         className="unselectable"
-        style={
-          contentDesc
-            ? {
-                width: '100%',
-                cursor: 'pointer',
-                fontSize: '32px',
-                fontWeight: 'bolder',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'space-between',
-              }
-            : {
-                width: '100%',
-                cursor: 'default',
-                fontSize: '32px',
-                fontWeight: 'bolder',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'space-between',
-              }
-        }
-        {...getToggleProps({
-          onClick: () => setExpanded((prevExpanded) => !prevExpanded),
-        })}
+        style={{
+          width: '100%',
+          fontSize: '32px',
+          fontWeight: 'bolder',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+        }}
+        {...getToggleProps()}
       >
         <span
           style={{
@@ -139,9 +136,9 @@ const ContentItem = (props) => {
               );
             })}
           </div>
+          {links ? <SocialLinks links={links} /> : null}
         </section>
       ) : null}
-      {links ? <SocialLinks links={links} /> : null}
     </div>
   );
 };
