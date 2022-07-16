@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkpersonal_website=self.webpackChunkpersonal_website||[]).push([[879],{3879:function(e,s,a){e.exports=a.p+"static/media/jour_gero_logo.31afa759c9f0f340a524.png"}}]);

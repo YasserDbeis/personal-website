@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkpersonal_website=self.webpackChunkpersonal_website||[]).push([[153],{153:function(e,s,a){e.exports=a.p+"static/media/Wavey.03acf08709d822e02e83.jpg"}}]);
