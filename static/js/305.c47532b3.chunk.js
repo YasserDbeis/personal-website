@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpersonal_website=self.webpackChunkpersonal_website||[]).push([[305],{7305:function(e,s,a){e.exports=a.p+"static/media/onsemi_logo.580933a3ca2db6bef8b5.png"}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpersonal_website=self.webpackChunkpersonal_website||[]).push([[303],{4303:function(e,s,p){e.exports=p.p+"static/media/pfr_logo.07d3ffe83bd75243700e.png"}}]);
